@@ -10,9 +10,9 @@ public class Pracownik {
 		this.Desks=new ArrayList<Desk>();
 	}
 	
-	private String imie; //firstName;
-	private String nazwisko; //surname;
-	private String id; //pesel;
+	private String imie; 
+	private String nazwisko; 
+	private String id; 
 	
 	private User user;
 	private List<Desk> Desks;

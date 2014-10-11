@@ -2,12 +2,12 @@ package zaddom;
 
 public class Desk {
 
-	private String budynek; //country; 
-	private String pietro; //city;
-	private String pokoj; //postalCode;
-	private String nrbiurka; //street;
-	private String adresip; //houseNumber;
-	//private String //localNumber;
+	private String budynek; 
+	private String pietro; 
+	private String pokoj; 
+	private String nrbiurka; 
+	private String adresip; 
+	
 	
 	private Pracownik person;
 
