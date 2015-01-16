@@ -1,4 +1,4 @@
-package zaddom;
+package domain;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package zaddom;
+package domain;
 
 public class Desk {
 

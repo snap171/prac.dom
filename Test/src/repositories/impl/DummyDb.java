@@ -2,7 +2,7 @@ package repositories.impl;
 
 import java.util.*;
 
-import zaddom.*;
+import domain.*;
 
 public class DummyDb {
 

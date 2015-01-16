@@ -3,17 +3,13 @@ package repositories.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import zaddom.Role;
-import zaddom.User;
-import repositories.IRepository;
+import domain.Role;
+import domain.User;
 import repositories.IUserRepository;
 
-
-public class DummyUserRepository implements IUserRepository {
+public class DummyUserRepository implements IUserRepository{
 
 	private DummyDb db;
-	
-	
 	
 	public DummyUserRepository(DummyDb db) {
 		super();
@@ -23,21 +19,24 @@ public class DummyUserRepository implements IUserRepository {
 	@Override
 	public void save(User entity) {
 		db.users.add(entity);
+		
 	}
 
 	@Override
 	public void update(User entity) {
+
 		
 	}
 
 	@Override
 	public void delete(User entity) {
 		db.users.remove(entity);
+		
 	}
 
 	@Override
 	public User get(int id) {
-		for(User u: db.users)
+		for(User u:db.users)
 			if(u.getId()==id)
 				return u;
 		return null;
@@ -45,6 +44,7 @@ public class DummyUserRepository implements IUserRepository {
 
 	@Override
 	public List<User> getAll() {
+
 		return db.users;
 	}
 
@@ -56,16 +56,16 @@ public class DummyUserRepository implements IUserRepository {
 	@Override
 	public List<User> withRole(String roleName) {
 
-		for(Role r: db.roles)
-			if(r.getName()==roleName)
+		for(Role r:db.roles)
+			if(r.getName().equals(roleName))
 				return r.getUsers();
 		return new ArrayList<User>();
 	}
 
 	@Override
 	public List<User> withRole(int roleId) {
-		
-		for(Role r: db.roles)
+
+		for(Role r:db.roles)
 			if(r.getId()==roleId)
 				return r.getUsers();
 		return new ArrayList<User>();

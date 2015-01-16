@@ -1,12 +1,13 @@
-package zaddom;
+package domain;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pracownik {
+public class Pracownik extends Entity {
 
 	public Pracownik()
 	{
+		super();
 		this.Desks=new ArrayList<Desk>();
 	}
 	
@@ -28,7 +29,7 @@ public class Pracownik {
 	public void setNazwisko(String nazwisko) {
 		this.nazwisko = nazwisko;
 	}
-	public String getId() {
+	public String getid() {
 		return id;
 	}
 	public void setId(String id) {
@@ -38,6 +39,8 @@ public class Pracownik {
 		return user;
 	}
 	public void setUser(User user) {
+		if(!this.equals(user.getPracownik()))
+			user.setPracownik(this);
 		this.user = user;
 	}
 	public List<Desk> getDesks() {

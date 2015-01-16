@@ -2,7 +2,7 @@ package repositories;
 
 import java.util.List;
 
-import zaddom.*;
+import domain.*;
 
 public interface IUserRepository extends IRepository<User>{
 
